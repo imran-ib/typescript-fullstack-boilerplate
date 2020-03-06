@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["./custom_typings", "./node_modules/@types"],
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "strict": false
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "custom_typings/Mutation.ts",
+    "custom_typings/Query.ts"
+  ]
+}

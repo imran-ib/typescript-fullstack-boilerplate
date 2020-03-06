@@ -1,0 +1,24 @@
+enum Permission {
+  ADMIN
+  USER
+  UPRDATEPERMISSION
+}
+type User {
+  id: ID! @id
+  firstName: String
+  lastName: String
+  fullName: String
+  email: String! @unique
+  
+  password: String!
+  avatar: String
+  resetToken: String
+  resetTokenExpiry: Float
+  isVerified: Boolean           @default(value: false)
+  permissions: [Permission!]!   @default(value: USER) @scalarList(strategy: RELATION)
+}
+
+type Profile {
+  id: ID! @id
+  user: User!
+}
